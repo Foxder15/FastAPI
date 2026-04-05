@@ -16,7 +16,7 @@ class DBLoader:
       db_reader =csv.DictReader(db)
       for db in db_reader:
         db_rows.append(db)
-    
+    print(db_rows)
     return db_rows
   
   def add_new_data(self, obj):
