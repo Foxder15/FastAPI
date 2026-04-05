@@ -18,3 +18,10 @@ class DBLoader:
         db_rows.append(db)
     
     return db_rows
+  
+  def add_new_data(self, obj):
+    with open(self.path, 'a', newline="") as db:
+      writer = csv.DictWriter(db, self.fieldnames)
+      writer.writerow(obj)
+    
+    return obj

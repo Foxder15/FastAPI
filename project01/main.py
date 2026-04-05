@@ -6,3 +6,12 @@ if __name__ == '__main__':
 
   data = db.read_db()
   print(data)
+
+  obj = {
+    "id" : "5",
+    "name":"Garen",
+    "age":28,
+    "hometown":"Demacia"
+  }
+
+  print(db.add_new_data(obj))
