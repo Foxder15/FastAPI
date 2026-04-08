@@ -11,12 +11,9 @@ class DBLoader:
     print('connection sucessfully!')
   
   def read_db(self):
-    db_rows = []
     with open(self.path) as db:
-      db_reader =csv.DictReader(db)
-      for db in db_reader:
-        db_rows.append(db)
-    print(db_rows)
+      db_reader = csv.DictReader(db)
+      db_rows = list(db_reader)
     return db_rows
   
   def add_new_data(self, obj):
