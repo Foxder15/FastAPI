@@ -46,7 +46,6 @@ class User(BaseModel):
 
     @model_validator(mode='after')
     def validate_object(self) -> 'User':
-        print(self)
         return self
     
     
